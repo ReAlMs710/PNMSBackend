@@ -1,0 +1,100 @@
+2024-07-27 21:24:11.488777: AI: Hello! What is your name?
+2024-07-27 21:24:18.667433: AI: Hello! What is your name?
+2024-07-27 21:24:23.620162: User: My name is Neil Kumaran
+2024-07-27 21:24:23.620162: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 21:24:29.692303: User: I am doing good today.
+2024-07-27 21:24:29.692303: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 21:24:35.364579: User: I am from the United States of America!
+2024-07-27 21:24:35.364579: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 21:24:35.365579: AI: Your conversation score is 100%
+2024-07-27 22:41:50.379372: AI: Hello! What is your name?
+2024-07-27 22:41:53.573827: User: Neil Kumaran
+2024-07-27 22:41:53.574827: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:41:54.798365: User: Work
+2024-07-27 22:41:54.798365: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:41:55.869987: User: Good
+2024-07-27 22:41:55.869987: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 22:41:55.870985: AI: Your conversation score is 40%
+2024-07-27 22:41:55.872149: AI: Feedback on your responses:
+The status should be more than one word and not contain inappropriate language.
+The location should be a meaningful response, not contain inappropriate language, and be a valid location.
+2024-07-27 22:42:04.469946: AI: Hello! What is your name?
+2024-07-27 22:42:38.333541: User: My name is Neil Kumaran
+2024-07-27 22:42:38.334542: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:42:44.221875: User: I am doing very good today.
+2024-07-27 22:42:44.221875: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:42:57.102087: User: I am from the United States of America
+2024-07-27 22:42:57.102087: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 22:42:57.103086: AI: Your conversation score is 100%
+2024-07-27 22:44:16.827032: AI: Hello! What is your name?
+2024-07-27 22:47:01.443859: User: Neil
+2024-07-27 22:47:01.444961: AI: Nice to meet you, Neil! How are you doing today?
+2024-07-27 22:47:02.436089: User: Good
+2024-07-27 22:47:02.436089: AI: That's great to hear, Neil! Where are you from?
+2024-07-27 22:47:04.460521: User: USA
+2024-07-27 22:47:04.460521: AI: Wonderful! It was nice talking to you, Neil. Goodbye!
+2024-07-27 22:47:04.460521: AI: Your conversation score is 30%
+2024-07-27 22:47:04.461523: AI: Here are some tips to improve your conversation:
+2024-07-27 22:47:04.461523: AI: Feedback on your responses:
+The name should be at least two words and not contain inappropriate language.
+The status should be more than one word and not contain inappropriate language.
+2024-07-27 22:48:11.053463: AI: Hello! What is your name?
+2024-07-27 22:48:15.611751: User: My name is Neil Kumaran
+2024-07-27 22:48:15.611751: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:48:20.187504: User: I am doing good today.
+2024-07-27 22:48:20.187504: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:48:25.723341: User: I am from Mexico.
+2024-07-27 22:48:25.724344: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 22:48:25.724344: AI: Your conversation score is 70%
+2024-07-27 22:48:25.725341: AI: Feedback on your responses:
+The location should be a meaningful response, not contain inappropriate language, and be a valid location.
+2024-07-27 22:50:46.463986: AI: Hello! What is your name?
+2024-07-27 22:50:52.178675: User: My name is Neil Kumaran
+2024-07-27 22:50:52.178675: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:50:55.675279: User: I am doing very good today.
+2024-07-27 22:50:55.675279: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:50:58.458510: User: I am from Mexico.
+2024-07-27 22:50:58.458510: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 22:50:58.459511: AI: Your conversation score is 100%
+2024-07-27 22:51:32.951144: AI: Hello! What is your name?
+2024-07-27 22:51:37.842145: User: My name is Neil Kumaran
+2024-07-27 22:51:37.843139: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:51:44.222399: User: I am doing very good today!
+2024-07-27 22:51:44.222399: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:51:47.114524: User: I am from India.
+2024-07-27 22:51:47.114524: AI: Wonderful! It was nice talking to you, Neil Kumaran. Goodbye!
+2024-07-27 22:51:47.114524: AI: Your conversation score is 100%
+2024-07-27 22:52:03.305555: AI: Hello! What is your name?
+2024-07-27 22:52:14.018901: User: The name's Neil Kumaran buddy.
+2024-07-27 22:52:14.018901: AI: Nice to meet you, The name's Neil Kumaran buddy.! How are you doing today?
+2024-07-27 22:52:27.049709: User: I am doing magnificant my little gooner.
+2024-07-27 22:52:27.050711: AI: That's great to hear, The name's Neil Kumaran buddy.! Where are you from?
+2024-07-27 22:52:32.537984: User: I am from Japan.
+2024-07-27 22:52:32.537984: AI: Wonderful! It was nice talking to you, The name's Neil Kumaran buddy.. Goodbye!
+2024-07-27 22:52:32.538993: AI: Your conversation score is 60%
+2024-07-27 22:52:32.539993: AI: Feedback on your responses:
+The name should be at least two words and not contain inappropriate language.
+2024-07-27 22:56:03.230362: AI: Hello! What is your name?
+2024-07-27 22:56:14.688600: User: The name that I go by as is Neil Kumaran
+2024-07-27 22:56:59.221369: AI: Hello! What is your name?
+2024-07-27 22:57:06.815987: User: The name is Neil Kumaran
+2024-07-27 22:57:06.816990: AI: Nice to meet you, The Name Is Neil Kumaran! How are you doing today?
+2024-07-27 22:58:24.082698: User: & "c:/Users/neilk/Documents/PNMS Project/PNMS Backend/.venv/Scripts/python.exe" "c:/Users/neilk/Documents/PNMS Project/PNMS Backend/PNMSBackend/newaiconvo.py"
+2024-07-27 22:58:24.082698: AI: That's great to hear, The Name Is Neil Kumaran! Where are you from?
+2024-07-27 22:58:28.945452: AI: Hello! What is your name?
+2024-07-27 22:58:35.471609: User: You can call me Neil Kumaran
+2024-07-27 22:58:35.472609: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:59:06.723408: AI: Hello! What is your name?
+2024-07-27 22:59:17.927741: User: My name is Neil Kumaran
+2024-07-27 22:59:17.927741: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:59:21.432722: AI: Hello! What is your name?
+2024-07-27 22:59:26.600195: User: The name is Neil Kumaran
+2024-07-27 22:59:26.600195: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:59:30.417758: User: & "c:/Users/neilk/Documents/PNMS Project/PNMS Backend/.venv/Scripts/python.exe" "c:/Users/neilk/Documents/PNMS Project/PNMS Backend/PNMSBackend/newaiconvo.py"
+2024-07-27 22:59:30.417758: AI: That's great to hear, Neil Kumaran! Where are you from?
+2024-07-27 22:59:35.096446: AI: Hello! What is your name?
+2024-07-27 22:59:40.175115: User: You can call me Neil Kumaran
+2024-07-27 22:59:40.176116: AI: Nice to meet you, Neil Kumaran! How are you doing today?
+2024-07-27 22:59:58.547450: AI: Hello! What is your name?
+2024-07-27 23:00:25.399378: User: The name you can call me is Neil Kumaran
+2024-07-27 23:00:25.399378: AI: Nice to meet you, Is Neil! How are you doing today?

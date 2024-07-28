@@ -2,8 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-sk = "sk-proj-zCq1qZN9XUcIAqXUu5TwT3BlbkFJpB3QepxWvntDU0EtrMOw"
-
 
 @app.route('/')
 def index():
