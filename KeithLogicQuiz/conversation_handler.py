@@ -1,41 +1,38 @@
 from response_extractor import ResponseExtractor
 
 class ConversationHandler:
-    def __init__(self, location_validator):
+    def __init__(self, location_validator, logger):
+        self.logger = logger
+        self.state = 0
         self.location_validator = location_validator
         self.response_extractor = ResponseExtractor()
-        self.conversation = [
-            "Hello! What is your name?",
-            "Nice to meet you, {}! How are you doing today?",
-            "That's great to hear, {}! Where are you from?",
-            "Wonderful! It was nice talking to you, {}. Goodbye!"
-        ]
 
-    def run_conversation(self, logger):
-        responses = []
+    def printandlog(self, str):
+        self.logger.log(str)
+        # print(str)
 
-        logger.log("Keith: Hello! What is your name?")
-        print("Keith: Hello! What is your name?")
-        user_response = input("User: ")
-        logger.log(f"User: {user_response}")
-        user_name = self.response_extractor.extract_name(user_response)
-        responses.append(user_name)
+    def run_conversation(self, user_input=""):
+        response = ""
+        extracted_info = ""
 
-        logger.log(f"Keith: Nice to meet you, {user_name}! How are you doing today?")
-        print(f"Keith: Nice to meet you, {user_name}! How are you doing today?")
-        user_response = input("User: ")
-        logger.log(f"User: {user_response}")
-        user_status = self.response_extractor.extract_status(user_response)
-        responses.append(user_status)
+        match self.state:
+            case 0:
+                response = "Keith: Hello! What is your name?"
+                self.state += 1
+            case 1:
+                extracted_info = self.response_extractor.extract_name(user_input)
+                response = f"Keith: Nice to meet you, {extracted_info}! How are you doing today?"
+                self.state += 1
+            case 2:
+                extracted_info = self.response_extractor.extract_status(user_input)
+                response = "Keith: That's great to hear! Where are you from?"
+                self.state += 1
+            case 3:
+                extracted_info = self.response_extractor.extract_location(user_input)
+                response = f"Keith: Wonderful! It was nice talking to you. Goodbye!"
+                self.state += 1
+            case _:
+                response = "Conversation has ended."
 
-        logger.log(f"Keith: That's great to hear, {user_name}! Where are you from?")
-        print(f"Keith: That's great to hear, {user_name}! Where are you from?")
-        user_response = input("User: ")
-        logger.log(f"User: {user_response}")
-        user_location = self.response_extractor.extract_location(user_response)
-        responses.append(user_location)
-
-        logger.log(f"Keith: Wonderful! It was nice talking to you, {user_name}. Goodbye!")
-        print(f"Keith: Wonderful! It was nice talking to you, {user_name}. Goodbye!")
-
-        return responses
+        self.printandlog(response)
+        return response, extracted_info
