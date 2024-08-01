@@ -12,18 +12,18 @@ users = {}
 def index():
     return open("index.html").read()
 
-@app.route('/src/<path:path>')
+@app.route('/assets/<path:path>')
 def send_static(path):
-    r = send_from_directory('src', path)
-    ext = path.split(".")[-1]
-    print(ext)
-    if ext == "jsx":
-        r.headers['Content-Type'] = 'text/typescript-jsx'
-    else:
-        r.headers["Content-Type"] = mimetypes.guess_type(path, strict=False)[0]
+    return send_from_directory('assets', path)
+    # ext = path.split(".")[-1]
+    # print(ext)
+    # if ext == "jsx":
+    #     r.headers['Content-Type'] = 'text/typescript-jsx'
+    # else:
+    #     r.headers["Content-Type"] = mimetypes.guess_type(path, strict=False)[0]
 
-    #return send_from_directory('src', path)
-    return r
+    # #return send_from_directory('src', path)
+    # return r
 
 
 
