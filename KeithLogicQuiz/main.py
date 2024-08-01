@@ -4,7 +4,6 @@ def main():
     runner = ConversationRunner()
 
     # Start conversation
-    print(runner.next())
     while True:
         user_input = input("User: ")
         response = runner.next(user_input)
