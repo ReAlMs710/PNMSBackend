@@ -8,13 +8,13 @@ sessions = {}
 users = {}
 
 
-@app.route('/Logo.png')
-def index():
-    return open("Logo.png").read()
-
 @app.route('/')
 def index():
     return open("index.html").read()
+
+@app.route('/Logo.png')
+def logo():
+    return open("Logo.png").read()
 
 @app.route('/assets/<path:path>')
 def send_static(path):
