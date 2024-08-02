@@ -55,6 +55,25 @@ def startsession():
     print(sessions)
     return rand
 
+@app.route('/profile', methods=['POST'])
+def profile():
+    data = request.json
+    if data["session"] not in sessions:
+        return "session not found"
+    if data["type"] == 'get':
+        return {
+                "username": sessions[data["session"]]["username"],
+                "email": users[sessions[data["session"]]["username"]]["email"],
+                "firstlang": users[sessions[data["session"]]["username"]]["firstlang"]
+        }
+    if data["firstlang"]:
+        users[sessions[data["session"]]["username"]]["firstlang"] = data["firstlang"]
+    if data["email"]:
+        users[sessions[data["session"]]["username"]]["email"] = data["email"]
+    with open("users.json", "w") as file:
+        file.write(json.dumps(users))
+    return "ok"
+
 @app.route('/api', methods=['POST'])
 def api():
     data = request.json
