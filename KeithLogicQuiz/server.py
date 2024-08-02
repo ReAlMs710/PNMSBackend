@@ -12,6 +12,10 @@ users = {}
 def index():
     return open("index.html").read()
 
+@app.route('/Logo.png')
+def index():
+    return open("Logo.png").read()
+
 @app.route('/assets/<path:path>')
 def send_static(path):
     return send_from_directory('assets', path)
