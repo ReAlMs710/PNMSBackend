@@ -5,11 +5,11 @@ def main():
     runner = ConversationRunner(
         api_key="sk-proj-nMqG2JPigq7udXlJfFbRT3BlbkFJPXQbeZtbSq4QBV318Bnl",
         lesson_plan="basic greetings and introductions",
-        user_language="spanish",
+        user_language="french",
         lesson_questions=[
-            "How do you say 'Hello' in Spanish?",
-            "What's the phrase for 'How are you?' in Spanish?",
-            "How would you introduce yourself in Spanish?"
+            "How do you say 'Hello' in english?",
+            "What's the phrase for 'How are you?' in english?",
+            "How would you introduce yourself in english?"
         ]
     )
 
