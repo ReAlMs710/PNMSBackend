@@ -73,7 +73,7 @@ Please begin with the Teaching Phase."""
 
     def test_user(self):
         questions = self.translate_text(', '.join(self.lesson_questions))
-        return f"{'¡Excelente! Ahora vamos a evaluar tu comprensión. Por favor, responde las siguientes preguntas' if self.user_language == 'Spanish' else 'Great! Now let\'s test your understanding. Please answer the following questions'}:\n\n{questions}"
+        return f"{'¡Excelente! Ahora vamos a evaluar tu comprensión. Por favor, responde las siguientes preguntas' if self.user_language == 'Spanish' else 'Great! Now lets test your understanding. Please answer the following questions'}:\n\n{questions}"
 
     def evaluate_responses(self):
         evaluation_prompt = f"""You are a fair and constructive evaluator. The student was taught about {self.lesson_plan} in {self.user_language}, with key terms in English. They were asked these questions: {', '.join(self.lesson_questions)}. Their responses were: {', '.join(self.responses)}. 

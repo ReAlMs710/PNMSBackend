@@ -101,8 +101,9 @@ def profile():
 
 @app.route('/api', methods=['POST'])
 def api():
-    if sessions[data["session"]]["username"]["chatbot"] == None:
-        sessions[data["session"]]["username"]["chatbot"] = ConversationRunner(
+    data = request.json
+    if sessions[data["session"]]["chatbot"] == None:
+        sessions[data["session"]]["chatbot"] = ConversationRunner(
             api_key = "sk-proj-nMqG2JPigq7udXlJfFbRT3BlbkFJPXQbeZtbSq4QBV318Bnl",
             lesson_plan = "basic greetings and introductions",
             user_language = users[sessions[data["session"]]["username"]]["firstlang"],
@@ -112,7 +113,7 @@ def api():
                 "How would you introduce yourself in english?"
             ]
         )
-    data = request.json
+
     if data["session"] not in sessions:
         return "session not found"
     return sessions[data["session"]]["chatbot"].next(data["text"])
