@@ -4,7 +4,8 @@
 - An AI chatbot using ChatGPT API will teach the user a lesson based on all of their preferences and native language
 - Created by Neil Kumaran, Mano Wertman, Pranav Pramod, and Stratton Jelley.
 - Check it out here: http://44.201.156.57
-  
+- Check the front-end repo over here: https://github.com/user-attachments/assets/6ecad1c2-79c7-44ff-892a-a95296538615
+
 ## Project Goals
 - Create a service that helps students from other countries that came to America learn english.
 - Use React, Tailwind, NodeJS, and hopefully python for the A.I. chatbot.
