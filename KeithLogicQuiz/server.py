@@ -1,4 +1,4 @@
-from flask import Flask, request, Response, send_from_directory
+from flask import Flask, request, Response, send_from_directory, send_file
 import hashlib, string, random, json, mimetypes, time
 from conversation_runner import ConversationRunner
 
@@ -10,7 +10,11 @@ users = {}
 
 @app.route('/')
 def index():
-    return open("index.html").read()
+    return send_file('index.html')
+
+@app.route('/Logo.png')
+def logo():
+    return send_file('Logo.png')
 
 @app.route('/assets/<path:path>')
 def send_static(path):
@@ -56,6 +60,25 @@ def startsession():
     sessions[rand] = { "username": data["username"], "lastactive": time.time(), "chatbot": ConversationRunner() }
     print(sessions)
     return rand
+
+@app.route('/profile', methods=['POST'])
+def profile():
+    data = request.json
+    if data["session"] not in sessions:
+        return "session not found"
+    if data["type"] == 'get':
+        return {
+                "username": sessions[data["session"]]["username"],
+                "email": users[sessions[data["session"]]["username"]]["email"],
+                "firstlang": users[sessions[data["session"]]["username"]]["firstlang"]
+        }
+    if data["firstlang"]:
+        users[sessions[data["session"]]["username"]]["firstlang"] = data["firstlang"]
+    if data["email"]:
+        users[sessions[data["session"]]["username"]]["email"] = data["email"]
+    with open("users.json", "w") as file:
+        file.write(json.dumps(users))
+    return "ok"
 
 @app.route('/api', methods=['POST'])
 def api():
