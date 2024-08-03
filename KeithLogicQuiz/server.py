@@ -44,7 +44,12 @@ def makeaccount():
     users[data["username"]] = { "email": data["email"], "hash": hashed, "salt": salt }
     with open("users.json", "w") as file:
         file.write(json.dumps(users))
-    return "ok"
+    rand = ''.join(random.choices(string.ascii_letters, k=32))
+    while rand in sessions.keys():
+        rand = ''.join(random.choices(string.ascii_letters, k=32))
+    sessions[rand] = { "username": data["username"], "lastactive": time.time(), "chatbot": None }
+    print(sessions)
+    return rand
 
 @app.route('/startsession', methods=['POST'])
 def startsession():
@@ -57,7 +62,7 @@ def startsession():
     rand = ''.join(random.choices(string.ascii_letters, k=32))
     while rand in sessions.keys():
         rand = ''.join(random.choices(string.ascii_letters, k=32))
-    sessions[rand] = { "username": data["username"], "lastactive": time.time(), "chatbot": ConversationRunner() }
+    sessions[rand] = { "username": data["username"], "lastactive": time.time(), "chatbot": None }
     print(sessions)
     return rand
 
@@ -96,6 +101,17 @@ def profile():
 
 @app.route('/api', methods=['POST'])
 def api():
+    if sessions[data["session"]]["username"]["chatbot"] == None:
+        sessions[data["session"]]["username"]["chatbot"] = ConversationRunner(
+            api_key = "sk-proj-nMqG2JPigq7udXlJfFbRT3BlbkFJPXQbeZtbSq4QBV318Bnl",
+            lesson_plan = "basic greetings and introductions",
+            user_language = users[sessions[data["session"]]["username"]]["firstlang"],
+            lesson_questions = [
+                "How do you say 'Hello' in english?",
+                "What's the phrase for 'How are you?' in english?",
+                "How would you introduce yourself in english?"
+            ]
+        )
     data = request.json
     if data["session"] not in sessions:
         return "session not found"
