@@ -3,7 +3,8 @@
 ### Create a service that helps low-income students with a lack of resources be able to learn English in America
 - An AI chatbot using ChatGPT API will teach the user a lesson based on all of their preferences and native language
 - Created by Neil Kumaran, Mano Wertman, Pranav Pramod, and Stratton Jelley.
-
+- Check it out here: http://44.201.156.57
+  
 ## Project Goals
 - Create a service that helps students from other countries that came to America learn english.
 - Use React, Tailwind, NodeJS, and hopefully python for the A.I. chatbot.
