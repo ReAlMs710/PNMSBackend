@@ -1,4 +1,4 @@
-from flask import Flask, request, Response, send_from_directory
+from flask import Flask, request, Response, send_from_directory, send_file
 import hashlib, string, random, json, mimetypes, time
 from conversation_runner import ConversationRunner
 
@@ -10,7 +10,11 @@ users = {}
 
 @app.route('/')
 def index():
-    return open("index.html").read()
+    return send_file('index.html')
+
+@app.route('/Logo.png')
+def logo():
+    return send_file('Logo.png')
 
 @app.route('/assets/<path:path>')
 def send_static(path):
@@ -56,6 +60,39 @@ def startsession():
     sessions[rand] = { "username": data["username"], "lastactive": time.time(), "chatbot": ConversationRunner() }
     print(sessions)
     return rand
+
+@app.route('/profile', methods=['POST'])
+def profile():
+    data = request.json
+    if data["session"] not in sessions:
+        return "session not found"
+    if data["type"] == 'get':
+        return {
+                "username": sessions[data["session"]]["username"],
+                "email": users[sessions[data["session"]]["username"]]["email"],
+                "firstlang": users[sessions[data["session"]]["username"]]["firstlang"]
+        }
+    username = sessions[data["session"]]["username"]
+    if 'firstlang' in data:
+        users[username]["firstlang"] = data["firstlang"]
+    if 'email' in data:
+        users[username]["email"] = data["email"]
+    if 'level' in data:
+        users[username]["level"] = data["level"]
+    if 'goals' in data:
+        users[username]["goals"] = data["goals"]
+    
+    # Debug prints to verify the state of the users dictionary
+    print("Updated users dictionary:", users)
+    print("Received data:", data)
+    
+    with open("users.json", "w") as file:
+        file.write(json.dumps(users))
+    
+    # Debug print to confirm file write operation
+    print("users.json has been updated.")
+    
+    return "ok"
 
 @app.route('/api', methods=['POST'])
 def api():
