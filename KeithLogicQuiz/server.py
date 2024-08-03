@@ -72,12 +72,26 @@ def profile():
                 "email": users[sessions[data["session"]]["username"]]["email"],
                 "firstlang": users[sessions[data["session"]]["username"]]["firstlang"]
         }
-    if data["firstlang"]:
-        users[sessions[data["session"]]["username"]]["firstlang"] = data["firstlang"]
-    if data["email"]:
-        users[sessions[data["session"]]["username"]]["email"] = data["email"]
+    username = sessions[data["session"]]["username"]
+    if 'firstlang' in data:
+        users[username]["firstlang"] = data["firstlang"]
+    if 'email' in data:
+        users[username]["email"] = data["email"]
+    if 'level' in data:
+        users[username]["level"] = data["level"]
+    if 'goals' in data:
+        users[username]["goals"] = data["goals"]
+    
+    # Debug prints to verify the state of the users dictionary
+    print("Updated users dictionary:", users)
+    print("Received data:", data)
+    
     with open("users.json", "w") as file:
         file.write(json.dumps(users))
+    
+    # Debug print to confirm file write operation
+    print("users.json has been updated.")
+    
     return "ok"
 
 @app.route('/api', methods=['POST'])
