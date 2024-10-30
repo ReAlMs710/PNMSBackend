@@ -3,7 +3,8 @@
 ### Create a service that helps low-income students with a lack of resources be able to learn English in America
 - An AI chatbot using ChatGPT API will teach the user a lesson based on all of their preferences and native language
 - Created by Neil Kumaran, Mano Wertman, Pranav Pramod, and Stratton Jelley.
-- Check it out here: http://44.201.156.57
+- As of now. OpenDoor is discontinued indefinitely, and will probably never be back online. You can run it yourself, and even add on if you wanna.
+- This was a really fun project to work on, and it taught me a lot. I maybe would've made this better if I didn't have other work.
 - Check the front-end repo over here: https://github.com/ManoW3/PNMSFronted
 
 ## Project Goals
